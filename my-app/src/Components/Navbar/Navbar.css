@@ -1,0 +1,355 @@
+/* Basic Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: flex-end; /* Move content to the right */
+  align-items: center;
+  padding: 16px 30px;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 10px;
+margin-right: 49px;
+}
+
+/* Logo Styling */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 80px;
+}
+
+/* Navbar Menu Styling */
+.nav-menu {
+  display: flex
+;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+  position: relative;
+ 
+}
+
+/* Menu Item Styling */
+.nav-menu li {
+  position: relative;
+  margin-right: 55px;
+}
+
+/* Link Styling */
+.nav-menu li a {
+  color: #171717;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 10px 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect on Links */
+.nav-menu li a:hover {
+  color: #FF4141; /* Red color when hovered */
+  transform: translateY(-5px); /* Subtle hover lift effect */
+  text-decoration: none;
+}
+
+/* Active Menu Item */
+.nav-menu li a.active {
+  color: #FF4141; /* Red color for active link */
+  font-weight: bold;
+}
+
+/* Underline Effect on Hover */
+.nav-menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #FF4141;
+  transition: width 0.3s ease;
+}
+
+.nav-menu li a:hover::after {
+  width: 100%;
+}
+
+/* HR Styling for Active Menu Item */
+.nav-menu hr {
+  border: none;
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #FF4141;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -8px; /* Positioned slightly below the text */
+  visibility: hidden; /* Initially hidden */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-menu li a.active + hr {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Search Bar */
+.nav-search-bar form {
+  display: flex;
+  align-items: center;
+  margin-left: 155px;
+}
+
+.nav-search-bar input {
+ padding: 8px;
+  width: 200px;
+}
+
+
+
+/* Login and Cart */
+.nav-login-cart {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+  padding-left: 15px;
+ margin-right: 125px;
+}
+
+/* Cart Icon with Animation */
+.nav-login-cart .cart-icon-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+
+}
+/* Container Styling */
+.nav-logo {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  gap: 15px; /* Space between the logo and text */
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #f0f4f8, #dfe9f3); /* Soft gradient background */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 400px; /* Limit the width of the container */
+  margin: 10px auto; /* Center the container */
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Container */
+.nav-logo:hover {
+  transform: scale(1.05); /* Slight scale on hover */
+}
+
+/* Logo Styling */
+.nav-logo img {
+  height: 50px; /* Adjust logo size */
+  width: auto;
+  border-radius: 50%; /* Circular logo for a clean look */
+  border: 2px solid #6a8caf; /* Matching border for the logo */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for the logo */
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Logo */
+.nav-logo img:hover {
+  transform: rotate(10deg); /* Playful rotation on hover */
+}
+
+/* Text Styling */
+.nav-logo h1 {
+  font-size: 24px; /* Large text for branding */
+  font-weight: bold;
+  color: #34495e; /* Neutral dark color */
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase; /* Stylish uppercase */
+  letter-spacing: 1.5px; /* Add spacing for elegance */
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-logo {
+    flex-direction: column; /* Stack logo and text vertically */
+    gap: 10px; 
+    text-align: center; /* Center text alignment */
+  }
+
+  .nav-logo img {
+    height: 40px; /* Smaller logo size */
+  }
+
+  .nav-logo h1 {
+    font-size: 20px; /* Smaller text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo {
+    max-width: 90%; /* Use more screen space on smaller devices */
+  }
+  .nav-search-bar input {
+    padding: 5px;
+    width: 131px;
+}
+  .nav-logo img {
+    height: 35px; /* Reduce logo size further */
+  }
+
+  .nav-logo h1 {
+    font-size: 18px; /* Smaller font for compact screens */
+  }
+}
+
+
+.nav-login-cart .cart-icon-link:hover {
+  transform: scale(1.1); /* Slightly scale the cart icon when hovered */
+}
+
+/* Cart Count Styling */
+.nav-cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #FF4141;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 50%;
+  min-width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-cart-count:hover {
+  background-color: #e02f2f;
+  transform: scale(1.1); /* Increase size slightly when hovered */
+}
+
+.nav-login-cart .login-btn {
+  background-color: #FF4141;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-login-cart .login-btn:hover {
+  background-color: #e02f2f;
+  transform: scale(1.05);
+}
+/* Hamburger Menu Styling */
+.hamburger {
+  display: none; /* Hidden on larger screens */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  height: 3px;
+  background-color: #171717;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Navigation Menu Styling for Mobile */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 20px;
+  position: absolute;
+  top: 123px;
+  right: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.nav-menu-visible {
+  display: flex;
+}
+
+.nav-menu li {
+  margin: 10px 0;
+}
+
+.nav-menu li a {
+  color: #171717;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-login-cart {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav-search-bar {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .nav-menu li {
+    margin: 0 15px;
+  }
+}

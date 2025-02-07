@@ -1,0 +1,222 @@
+
+/* Main Container */
+.loginsignup {
+    width: 100%;
+   padding-top: 55px;
+    height: 100vh;
+    /* background: lineagradient(1r-80deg, #a044a8, #0d441f22 60%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+  /* Login/Signup Form Container */
+  
+.loginsignup-container {
+  height: 606px;
+  width: 90%;
+  padding-top: 25px;
+  max-width: 614px;
+  background: #e4c0c0;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex
+;
+  flex-direction: column;
+  gap: 20px;
+}
+  
+  /* Header Section (Back Button and Heading) */
+  .loginsignup-header {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between button and heading */
+    margin-bottom: 10px;
+  }
+  
+  /* Back Button */
+  .back-button {
+    padding: 6px 12px;
+    font-size: 14px;
+    background: #ff8a5a;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background: #ff5a5a;
+  }
+  
+  .back-button:active {
+    background: #ff7043;
+  }
+  
+  /* Form Header */
+  .loginsignup-header h1 {
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+  }
+  /* Login Redirect */
+.loginsignup-login {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+}
+
+.loginsignup-login span {
+  font-weight: bold;
+}
+
+.login-link a {
+  color:  #ff7043;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+  color:  #ff7043;
+  text-decoration: underline;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .loginsignup-login {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .loginsignup-login {
+    font-size: 0.8rem;
+    margin-top: 0.8rem;
+  }
+}
+
+  /* Input Fields */
+  .loginsignup-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .loginsignup-fields input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .loginsignup-fields input:focus {
+    border-color: #ff5a5a;
+  }
+  
+  /* Submit Button */
+  .submit-button {
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #ff5a5a, #ff8a5a);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background: #ff4141;
+    transform: translateY(-3px);
+  }
+  
+  .submit-button:active {
+    background: #ff5a5a;
+    transform: translateY(0);
+  }
+  
+  /* Login Redirect */
+  .loginsignup-login {
+    font-size: 14px;
+    color: #888;
+    text-align: center;
+  }
+  
+  .loginsignup-login .login-link {
+    color: #ff5a5a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .loginsignup-login .login-link:hover {
+    color: #ff4141;
+  }
+  
+  /* Terms and Agreement */
+  .loginsignup-agree {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .loginsignup-agree input {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+  
+  .loginsignup-agree a {
+    color: #ff5a5a;
+    text-decoration: none;
+  }
+  
+  .loginsignup-agree a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .loginsignup-header h1 {
+      font-size: 24px;
+    }
+  
+    .submit-button {
+      font-size: 15px;
+    }
+  
+    .loginsignup-fields input {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .loginsignup-header h1 {
+      font-size: 20px;
+    }
+  
+    .submit-button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .loginsignup-login {
+      font-size: 12px;
+    }
+  
+    .loginsignup-agree {
+      font-size: 12px;
+    }
+  }
+  

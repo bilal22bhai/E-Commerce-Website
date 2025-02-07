@@ -1,0 +1,256 @@
+/* ProceedTOCheckOut.css */
+
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f8fc;
+  }
+  
+  .checkout-container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .checkout-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Section styles */
+  .checkout-section {
+    margin-bottom: 20px;
+  }
+  
+  .checkout-section h2 {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  .checkout-select,
+  .checkout-textarea,
+  .checkout-radio-group label,
+  .checkout-submit-button {
+    width: 100%;
+  }
+  
+  /* Select dropdown */
+  .checkout-select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Textarea for the address */
+  .checkout-textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: none;
+    min-height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  /* Payment Method Radio Buttons */
+  .checkout-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .checkout-radio-group label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #555;
+    padding: 10px;
+    background: #f7f8fc;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .checkout-radio-group label:hover {
+    border-color: #007bff;
+  }
+  
+  .checkout-radio-group input {
+    margin-right: 10px;
+  }
+  
+  /* Order Review */
+  .checkout-section p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Submit Button */
+  .checkout-submit-button {
+    padding: 15px;
+    font-size: 1rem;
+    color: #fff;
+    background: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .checkout-submit-button:hover {
+    background: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .checkout-container {
+      padding: 15px;
+    }
+  
+    .checkout-title {
+      font-size: 1.8rem;
+    }
+  
+    .checkout-section h2 {
+      font-size: 1rem;
+    }
+  
+    .checkout-radio-group label {
+      font-size: 0.9rem;
+    }
+  
+    .checkout-submit-button {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .checkout-title {
+      font-size: 1.5rem;
+    }
+  
+    .checkout-radio-group label {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .checkout-radio-group input {
+      margin-bottom: 5px;
+    }
+  
+    .checkout-submit-button {
+      padding: 12px;
+      font-size: 0.85rem;
+    }
+  }
+/* Modal Container */
+.success-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Slightly darker overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Modal Content */
+.modal-content {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa); /* Gradient background for a modern look */
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 400px;
+  animation: scaleIn 0.4s ease-out; /* Smooth scaling effect */
+}
+
+/* Title Styling */
+.modal-content h2 {
+  color: #4caf50;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Description Styling */
+.modal-content p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+/* Close Button */
+.modal-close-button {
+  background: linear-gradient(135deg, #4caf50, #3e8e41); /* Modern gradient button */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.modal-close-button:hover {
+  background: linear-gradient(135deg, #3e8e41, #2d6f34);
+  transform: translateY(-2px); /* Button lift on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .modal-content h2 {
+    font-size: 20px;
+  }
+
+  .modal-content p {
+    font-size: 16px;
+  }
+
+  .modal-close-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

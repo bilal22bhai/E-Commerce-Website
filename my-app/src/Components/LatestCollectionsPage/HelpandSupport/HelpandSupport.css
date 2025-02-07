@@ -1,0 +1,158 @@
+/* Base Styles */
+.help-support {
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+  }
+  
+  .help-support-toggle {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    user-select: none;
+  
+  }
+  
+  /* Dropdown Icon Styling */
+  .dropdown-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .dropdown-icon.open {
+    transform: rotate(180deg);
+  }
+  
+  /* Dropdown Menu Styles */
+  .customcare-popup {
+    position: absolute;
+    top: 40px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 220px;
+    z-index: 10;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Dropdown List */
+  .care-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .care-item {
+    border-bottom: 1px solid #f1f1f1;
+  }
+  
+  .care-item:last-child {
+    border-bottom: none;
+  }
+  
+  .care-item-anchor {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .care-item-anchor:hover {
+    background-color: #f5f5f5;
+    color: #007bff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .customcare-popup {
+      width: 180px;
+    }
+  
+    .care-item-anchor {
+      font-size: 13px;
+      padding: 10px 14px;
+    }
+  }
+  /* Dropdown Menu Styling */
+.customcare-popup {
+  position: absolute;
+  top: 40px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 220px;
+  z-index: 10;
+  animation: fadeIn 0.3s ease;
+}
+
+/* List Items */
+.care-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.care-item {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.care-item:last-child {
+  border-bottom: none;
+}
+
+.care-item-anchor {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.care-item-anchor:hover {
+  background-color: #f5f5f5;
+  color: #007bff;
+}
+
+/* Icon Styling */
+.care-icon {
+  font-size: 18px; /* Size of icons */
+  color: #666; /* Default icon color */
+}
+
+.care-item-anchor:hover .care-icon {
+  color: #007bff; /* Icon color on hover */
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

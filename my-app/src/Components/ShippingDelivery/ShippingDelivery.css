@@ -1,0 +1,84 @@
+/* Container styles */
+.shipping-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #cbc1d8;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 90%; /* Adjusts to smaller screens */
+    width: 400px; /* Fixed width for larger screens */
+    margin: 20px auto;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .shipping-container {
+      padding: 15px;
+      max-width: 95%; /* Increase width for small devices */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .shipping-container {
+      padding: 10px;
+      max-width: 100%; /* Full width for very small devices */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow for smaller screens */
+    }
+  }
+  
+  /* Heading styles */
+  .shipping-heading {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    word-wrap: break-word; /* Ensure long words break on smaller screens */
+  }
+  
+  @media (max-width: 480px) {
+    .shipping-heading {
+      font-size: 20px; /* Adjust heading size for small screens */
+    }
+  }
+  
+  /* Description styles */
+  .shipping-description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 480px) {
+    .shipping-description {
+      font-size: 14px; /* Smaller font size for better readability on small screens */
+    }
+  }
+  
+  /* Button styles */
+  .shipping-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+  }
+  
+  .shipping-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Subtle scaling effect on hover */
+  }
+  
+  @media (max-width: 480px) {
+    .shipping-button {
+      font-size: 14px; /* Adjust button font size */
+      padding: 8px 15px; /* Reduce padding for smaller screens */
+    }
+  }
+  

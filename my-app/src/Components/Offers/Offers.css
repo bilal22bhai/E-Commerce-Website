@@ -1,0 +1,172 @@
+.offers {
+    height: auto; /* Allow height to adjust based on content */
+    background: linear-gradient(180deg, #614d63, #313a3422 60%);
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping for responsiveness */
+    width: 90%; /* Adjust width for smaller screens */
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 60px;
+    margin-top: 30px;
+    gap: 20px; /* Add space between items */
+    border-radius: 30px;
+}
+
+.exclusive-latest-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.exclusive-latest-btn img {
+    margin-left: 8px;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.exclusive-latest-btn:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.exclusive-latest-btn:hover img {
+    transform: translateX(4px);
+}
+
+.exclusive-latest-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.offers-left {
+    flex: 1 1 300px; /* Flexible width with minimum 300px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the left */
+    text-align: left; /* Ensure text aligns correctly */
+}
+
+.offers-left h1 {
+    color: #090909;
+    font-size: 60px; /* Reduce size for smaller screens */
+    font-weight: 600;
+    margin: 0; /* Remove extra margin */
+}
+
+.offers-left p {
+    color: #090909;
+    font-size: 18px; /* Adjust font size for smaller screens */
+    font-weight: 600;
+    margin-top: 10px; /* Add space between elements */
+}
+
+.offers-left button {
+    width: 100%; /* Make button responsive */
+    max-width: 282px; /* Set a max width */
+    height: 50px; /* Adjust height */
+    border-radius: 25px;
+    margin-top: 20px;
+    background: #d81414;
+    color: white;
+    font-size: 18px; /* Adjust font size */
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.offers-left button:hover {
+    background: #b11212;
+    transform: scale(1.05); /* Slightly enlarge button */
+}
+
+.offers-right {
+    flex: 1 1 300px; /* Flexible width with minimum 300px */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the image */
+}
+
+.offers-right img {
+    max-width: 100%; /* Ensure the image scales correctly */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+@media (max-width: 1024px) {
+    .offers {
+        width: 95%; /* Slightly reduce width for medium screens */
+    }
+
+    .offers-left h1 {
+        font-size: 50px; /* Adjust font size */
+    }
+
+    .offers-left p {
+        font-size: 16px; /* Adjust text size */
+    }
+}
+
+@media (max-width: 768px) {
+    .offers {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center content */
+        gap: 30px;
+    }
+
+    .offers-left h1 {
+        font-size: 40px; /* Further reduce font size for smaller devices */
+    }
+
+    .offers-left p {
+        font-size: 16px; /* Adjust text size */
+    }
+
+    .offers-left button {
+        height: 45px; /* Adjust button size */
+        font-size: 16px; /* Adjust button text */
+    }
+}
+
+@media (max-width: 480px) {
+    .offers {
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px;
+    }
+
+    .offers-left h1 {
+        font-size: 30px; /* Adjust for small screens */
+    }
+
+    .offers-left p {
+        font-size: 14px;
+    }
+
+    .offers-left button {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .exclusive-latest-btn {
+        padding: 0.6rem 1rem; /* Reduce padding for smaller screens */
+        font-size: 1rem;
+    }
+
+    .exclusive-latest-btn img {
+        width: 16px; /* Adjust image size */
+        height: 16px;
+    }
+}

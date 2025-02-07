@@ -1,0 +1,95 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+  }
+  
+  /* Offices Page Container */
+  .offices-page-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Title */
+  .offices-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #444;
+  }
+  
+  /* Grid Layout */
+  .offices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Office Card */
+  .office-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .office-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* City Name */
+  .office-city {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Address */
+  .office-address {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* Phone Link */
+  .office-phone {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .office-phone-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .office-phone-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .offices-title {
+      font-size: 2rem;
+    }
+  
+    .office-card {
+      padding: 15px;
+    }
+  
+    .office-city {
+      font-size: 1.5rem;
+    }
+  
+    .office-address, .office-phone {
+      font-size: 0.9rem;
+    }
+  }
+  

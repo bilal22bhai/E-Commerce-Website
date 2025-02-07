@@ -1,0 +1,543 @@
+
+
+
+
+.shopcategory-indexShort {
+    display: flex;
+    margin: 0px auto; /* Center content */
+    justify-content: space-between;
+    align-items: center;
+    width: 90%; /* Constrain width */
+    max-width: 1200px; /* Limit maximum width */
+    gap: 20px; /* Add gap for smaller screens */
+}
+
+.shopcategory-sort {
+    padding: 10px 20px;
+justify-content: center;
+   display: flex;
+    font-size: 16px; /* Adjust font size */
+}
+
+.shopcategory-indexShort p span {
+    font-weight: 600;
+    font-size: 16px; /* Adjust font size for smaller screens */
+}
+
+.shopcategory-products {
+    margin: 20px auto; /* Center content */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on larger screens */
+    row-gap: 40px; /* Reduce row gap */
+    column-gap: 20px; /* Add consistent column gap */
+    width: 90%; /* Constrain width */
+    max-width: 1200px; /* Limit maximum width */
+}
+
+  
+  .explore-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .explore-button:hover {
+    background-color: #e5533c;
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .explore-button:active {
+    background-color: #c4422e;
+    transform: scale(1);
+  }
+  
+  @media (max-width: 768px) {
+    .explore-button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+    .productdisplay-main-img {
+      width: 100%;
+      height: 400px;
+      padding-top: 39px;
+  }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+
+.shopcategory-loadmore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto; /* Adjust margin for smaller screens */
+    width: 200px; /* Adjust width */
+    height: 60px; /* Adjust height */
+    border-radius: 75px;
+ 
+    
+    font-size: 16px; /* Adjust font size */
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 1280px) {
+    .shopcategory-products {
+      grid-template-columns: 1fr 1fr 1fr 1fr;/* Adjust to 3 columns */
+        row-gap: 30px; /* Adjust row gap */
+    }
+
+    .shopcategory-indexShort {
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        gap: 15px; /* Add gap between elements */
+    }
+
+    .shopcategory-sort {
+        font-size: 14px; /* Reduce font size */
+        padding: 8px 15px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 1024px) {
+    .shopcategory-products {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 15px; /* Reduce column gap */
+    }
+
+    .shopcategory-indexShort {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .shopcategory-loadmore {
+        width: 180px; /* Adjust width */
+        height: 55px; /* Adjust height */
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .shopcategory-products {
+      grid-template-columns:  1fr 1fr 1fr;
+
+        row-gap: 10px; /* Reduce row gap */
+        margin: 10px auto; /* Adjust margins */
+    }
+
+    .shopcategory-sort {
+        font-size: 12px; /* Reduce font size */
+        padding: 6px 10px; /* Adjust padding */
+    }
+
+    .shopcategory-indexShort {
+        align-items: center; /* Center-align elements */
+        text-align: center; /* Center-align text */
+    }
+}
+
+@media (max-width: 480px) {
+    .shopcategory-products {
+        grid-template-columns: 1fr 1fr; /* Single column for mobile devices */
+        row-gap: 15px; /* Reduce row gap */
+    }
+
+    .shopcategory-indexShort {
+        width: 100%; /* Full width */
+        text-align: center; /* Center-align content */
+        gap: 10px;
+    }
+
+    .shopcategory-loadmore {
+        width: 150px; /* Adjust button size */
+        height: 50px;
+        font-size: 12px;
+    }
+}
+.shopcategory-banner-container {
+    position: relative;
+    height: auto; 
+    width: 90%;
+    max-width: 600px; /* Adjust as per your design */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px; /* Optional: Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Shadow for better aesthetics */
+  }
+  
+  /* Video Styling */
+.shopcategory-banner-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures video scales properly */
+  border-radius: inherit;
+}
+
+/* Sort Section Styling */
+.shopcategory-sort {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between; /* Ensures spacing works well */
+}
+
+/* Label Styling */
+.shopcategory-sort label {
+  font-weight: bold;
+}
+
+/* Select and Range Input Styling */
+.shopcategory-sort select,
+.shopcategory-sort input[type="range"] {
+  padding: 5px;
+  margin-left: 10px;
+  font-size: 1rem; /* Adjust for readability */
+}
+
+/* Span Styling */
+.shopcategory-sort span {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .shopcategory-sort {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start;
+  }
+
+  .shopcategory-sort select,
+  .shopcategory-sort input[type="range"] {
+    width: 100%; /* Make inputs full-width */
+    margin-left: 0; /* Remove left margin for better alignment */
+  }
+
+  .shopcategory-sort label,
+  .shopcategory-sort span {
+    margin-left: 0; /* Reset margins for alignment */
+  }
+}
+
+@media (max-width: 480px) {
+  .shopcategory-banner-video {
+    height: 200px; /* Adjust video height for smaller screens */
+    object-fit: contain; /* Ensure the video fits nicely */
+  }
+
+  .shopcategory-sort {
+    gap: 10px; /* Reduce gap for smaller devices */
+  }
+
+  .shopcategory-sort select,
+  .shopcategory-sort input[type="range"] {
+    font-size: 0.9rem; /* Slightly smaller font for compact screens */
+  }
+}
+.shopcategory-sort {
+  display: flex;
+  align-items: center;
+  margin-top: 23px;
+  font-size: 24px;
+  justify-content: flex-start; /* Align elements to the left */
+  margin-bottom: 5px; /* Spacing between sort section and products */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.shopcategory-sort label {
+  font-weight: bold;
+  color: #333;
+  margin-right: -27px;
+  transition: color 0.3s ease; /* Smooth transition for label color */
+}
+
+/* Hover effect on label */
+.shopcategory-sort label:hover {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.shopcategory-sort select {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 200px; /* Set a fixed width */
+}
+
+/* Hover effect on the dropdown */
+.shopcategory-sort select:hover {
+  border-color: #007bff;
+  background-color: #eaf5ff;
+}
+
+/* Focus effect on the dropdown */
+.shopcategory-sort select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .shopcategory-sort {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .shopcategory-sort select {
+    width: 100%; /* Full width on smaller screens */
+    margin-top: 10px;
+  }
+
+  .shopcategory-sort label {
+    margin-right: 0;
+    margin-bottom: 5px; /* Space between label and select */
+  }
+}
+
+@media (max-width: 480px) {
+  .shopcategory-sort {
+    gap: 10px;
+  }
+
+  .shopcategory-sort select {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .shopcategory-sort label {
+    font-size: 14px;
+  }
+}
+
+
+
+.favorite-btn22 {
+  position: absolute;
+  bottom: 64px;
+  left: -6px;
+  padding: 8px 23px;
+  background-color: transparent;
+  color: #5c5252;
+  font-size: 35px;
+  font-weight: bold;
+  border: none;
+  border-radius: 57px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 2;
+}
+
+@media (max-width: 1024px) {
+  .favorite-btn22 {
+    font-size: 30px;
+    bottom: 58px;
+    left: -13px;
+    padding: 7px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .favorite-btn22 {
+    font-size: 22px;
+    bottom: 54px;
+    left: -6px;
+    padding: 6px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .favorite-btn22 {
+    font-size: 22px;
+    bottom: 50px;
+    left: 10px;;
+    padding: 6px 5px;
+  }
+}
+
+
+
+.favorite-btn:hover {
+  background-color: #ff3b2f;
+  transform: scale(1.05);
+}
+
+.favorite-btn:focus {
+  outline: none;
+}
+
+.favorite-btn:active {
+  transform: scale(0.98);
+}
+
+.favorite-btn span {
+  margin-right: 5px;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .favorite-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .favorite-btn {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .favorite-btn {
+    padding: 5px 10px;
+    font-size: 8px;
+  }
+}
+.product-tag {
+  position: absolute; /* Make it positioned relative to the parent container */
+  top: 10px;          /* Adjust the distance from the top */
+  left: 10px;         /* Adjust the distance from the left */
+  background-color: #e00b25; /* Red background for the sale tag */
+  color: #ffffff;     /* White text color */
+  padding: 5px 10px;  /* Add some padding for better appearance */
+  font-size: 14px;    /* Font size for the sale text */
+  font-weight: bold;  /* Bold text for emphasis */
+  text-transform: uppercase; /* Ensure the text is uppercase */
+  border-radius: 4px; /* Round the corners for a modern look */
+ 
+}
+.product-item {
+  position: relative; /* Make the product item container relative for absolute positioning */
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.shopcategory-products .product-item img {
+  width: 100%; /* Ensure the image takes the full width of its container */
+  height: auto;
+  border-radius: 10px; /* Optional: Rounded corners for the image */
+}
+
+@media (max-width: 768px) {
+  .favorite-btn {
+    font-size: 1.8rem; /* Slightly smaller icon size for tablet screens */
+    top: 8px; /* Adjust top positioning */
+    left: 8px; /* Adjust left positioning */
+  }
+}
+
+@media (max-width: 480px) {
+  .favorite-btn {
+    font-size: 1.5rem; /* Even smaller icon size for mobile screens */
+    top: 6px; /* Adjust top positioning */
+    left: 6px; /* Adjust left positioning */
+  }
+}
+/* Ensure the container takes up the full screen */
+
+
+/* Position and size the video container responsively */
+.video-container2 {
+  width: 85%;
+  max-width: 1200px; /* Set a max width to avoid being too large on bigger screens */
+  height: auto; /* Maintain aspect ratio */
+  position: relative;
+  margin: 0 auto; /* Center the container */
+  padding: 15px; /* Add some internal spacing */
+  box-sizing: border-box;
+}
+
+/* Style the video element */
+.shopcategory-banner-video2 {
+  width: 100%; /* Scale video to fill the container width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures video scales proportionally */
+  border-radius: 25px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for aesthetics */
+}
+
+
+
+  .video-container2 {
+    width: 95%; /* Increase width on smaller screens for better visibility */
+    padding: 10px;
+  }
+
+  .shopcategory-banner-video2 {
+    border-radius: 15px; /* Slightly reduce the border radius */
+  }
+
+
+@media screen and (max-width: 480px) {
+  .video-container2 {
+    width: 100%; /* Utilize full width on very small screens */
+  }
+
+  .shopcategory-banner-video2 {
+    border-radius: 10px; /* Further reduce border radius for compact layout */
+  }
+}
+.shopcategory-banner-container2 {
+  position: relative;
+  width: 100%;
+  height: vh; /* Adjust the height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+ 
+}
+
+.video-container2 {
+  width: 90%;
+  height: 90%;
+  position: relative;
+  overflow: hidden;
+}
+
+.shopcategory-banner-video2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video fills the container */
+}
+
+@media (max-width: 768px) {
+  .shopcategory-banner-container2 {
+    height: 40vh; /* Adjust height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .shopcategory-banner-container2 {
+    height: 30vh; /* Even smaller for mobile devices */
+  }
+}

@@ -1,0 +1,223 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Reduced gap for better spacing on smaller screens */
+    padding: 20px; /* Added padding for responsiveness */
+    width: 100%; /* Ensure it spans full width */
+ 
+}
+
+/* Base Styling for Footer Logo */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Spacing between logo and text */
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    text-align: center;
+  }
+  
+  /* Logo Image Styling */
+  .footer-logo img {
+    height: 300px;
+    width: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-logo img:hover {
+    transform: scale(1.05); /* Slight hover effect */
+  }
+  
+  /* Footer Text Styling */
+  .footer-logo h1 {
+    font-size: 22px;
+    color: #34495e;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+  
+  /* Responsive Design for Smaller Devices */
+  @media (max-width: 768px) {
+    .footer-logo {
+      flex-direction: column; /* Stack elements vertically */
+      gap: 10px;
+    }
+  
+    .footer-logo img {
+      height: 175px;
+    }
+  
+    .footer-logo h1 {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-logo img {
+      height: 125px;
+    }
+  
+    .footer-logo h1 {
+      font-size: 16px;
+    }
+  }
+  
+
+.footer-logo p {
+    color: black;
+    font-size: 36px; /* Adjust font size for responsiveness */
+    font-weight: 700;
+    text-align: center; /* Center align text */
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+    justify-content: center; /* Center align items */
+    list-style: none;
+    gap: 20px; /* Adjust gap for smaller screens */
+    color:black;
+    font-size: 18px; /* Adjust font size */
+    padding: 0; /* Remove extra padding */
+    margin: 0; /* Remove default margin */
+}
+
+.footer-links li {
+    cursor: pointer;
+}
+
+.footer-social-icon {
+    display: flex;
+    justify-content: center; /* Center align social icons */
+    gap: 15px; /* Adjust gap for responsiveness */
+}
+
+.footer-icons-container {
+    padding: 10px;
+    padding-bottom: 6px;
+    background: #fbfbfb;
+    border: 1px solid #ebebeb;
+    border-radius: 5px; /* Add a subtle border radius */
+}
+
+.footer-copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Adjust gap for smaller screens */
+    width: 100%;
+    color: black;
+    font-size: 16px; /* Adjust font size for responsiveness */
+    text-align: center;
+    margin-bottom: 20px; /* Adjust bottom margin */
+}
+
+.fotter-copyright p{
+    color: black;
+}
+
+.footer-copyright hr {
+    width: 90%; /* Adjust width for responsiveness */
+    border: none;
+    border-radius: 10px;
+    height: 3px;
+    background: #6b6b6b;
+}.footer-links {
+    list-style-type: none;  /* Removes the default bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;  /* Align the list items horizontally */
+    justify-content: center;  /* Centers the links */
+    gap: 30px;  /* Adds spacing between the links */
+    flex-wrap: wrap;  /* Makes the links stack on smaller screens */
+  }
+  
+  .footer-link {
+    text-decoration: none;  /* Removes the underline from the links */
+    color: #333;  /* Sets a dark color for the text */
+    font-size: 18px;  /* Slightly larger font size for readability */
+    font-weight: 600;  /* Semi-bold text */
+    padding: 10px 15px;  /* Adds padding around the text */
+    border-radius: 5px;  /* Rounded corners for the link */
+    transition: all 0.3s ease;  /* Smooth transition for hover and active states */
+    position: relative;  /* To position the hover effect below the link */
+  }
+  
+  .footer-link::after {
+    content: '';  /* Adds a pseudo-element */
+    position: absolute;
+    width: 100%;  /* Matches the link's width */
+    height: 3px;  /* Height of the underline effect */
+    background-color: #3498db;  /* Blue color for the underline */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);  /* Starts with the line hidden */
+    transform-origin: bottom right;  /* Starts the animation from the right */
+    transition: transform 0.3s ease;  /* Smooth transition for the underline animation */
+  }
+  
+  .footer-link:hover {
+    color: #3498db;  /* Changes text color on hover */
+  }
+  
+  .footer-link:hover::after {
+    transform: scaleX(1);  /* Reveals the underline effect when hovered */
+    transform-origin: bottom left;  /* Expands the underline from the left */
+  }
+  
+  .footer-link:active {
+    transform: scale(0.98);  /* Shrinks the link slightly when clicked */
+  }
+  
+
+
+@media (max-width: 768px) {
+    .footer-logo p {
+        font-size: 28px; /* Reduce font size for tablets */
+    }
+
+    .footer-links {
+        gap: 15px; /* Reduce gap for smaller screens */
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .footer-social-icon {
+        gap: 10px; /* Adjust spacing for tablets */
+    }
+
+    .footer-copyright {
+        gap: 15px; /* Reduce gap */
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo p {
+        font-size: 22px; /* Further reduce font size for mobile */
+    }
+
+    .footer-links {
+        flex-direction: column; /* Stack links vertically on mobile */
+        gap: 10px;
+    }
+
+    .footer-social-icon {
+        gap: 8px; /* Reduce gap for mobile */
+    }
+
+    .footer-copyright hr {
+        width: 95%; /* Full width on mobile */
+    }
+
+    .footer-copyright {
+        font-size: 12px; /* Reduce font size */
+    }
+}

@@ -1,0 +1,113 @@
+.popular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Increased gap for better spacing */
+    height: 90vh;
+    padding: 20px; /* Added padding for small screens */
+
+}
+
+.popular h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+    margin: 0; /* Remove default margin for consistency */
+}
+
+.popular hr {
+    width: 450px;
+    height: 4px; /* Set a consistent height */
+    border: none; /* Removed border for proper styling */
+    border-radius: 10px;
+    background: #252525;
+}
+
+.popular-item {
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /* Added wrapping for better responsiveness */
+    justify-content: center; /* Center content on smaller screens */
+}
+
+@media (max-width: 1280px) {
+    .popular {
+        height: 70vh;
+    }
+
+    .popular h1 {
+        font-size: 40px; /* Adjust font size for medium screens */
+    }
+
+    .popular hr {
+        width: 300px; /* Adjust width for better scaling */
+    }
+
+    .popular-item {
+        gap: 20px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .popular {
+        height: 60vh;
+    }
+
+    .popular h1 {
+        font-size: 30px; /* Adjust font size for tablets */
+    }
+
+    .popular hr {
+        width: 200px;
+        height: 3px; /* Slightly reduce height */
+    }
+
+    .popular-item {
+        gap: 15px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .popular {
+        height: auto; /* Allow dynamic height for small screens */
+        gap: 10px; /* Adjust spacing */
+    }
+
+    .popular h1 {
+        font-size: 24px; /* Further reduce font size */
+    }
+
+    .popular hr {
+        width: 150px;       
+    }
+
+    .popular-item {
+        gap: 10px;
+        margin-top: 15px; /* Adjust spacing */
+    }
+}
+
+@media (max-width: 500px) {
+    .popular {
+        height: auto; /* Let content dictate height */
+        padding: 10px; /* Add padding for small screens */
+    }
+
+    .popular h1 {
+        font-size: 20px; /* Smallest font size for mobile */
+    }
+
+    .popular-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Grid layout for better scaling */
+        gap: 10px; /* Adjust gap between items */
+        margin-top: 10px;
+    }
+
+    .popular hr {
+        width: 100px;
+    }
+}

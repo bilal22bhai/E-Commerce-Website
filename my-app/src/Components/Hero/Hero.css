@@ -1,0 +1,267 @@
+/* Hero.css */
+
+/* General Styles */
+.hero {
+  height: auto; /* Allow height to adjust based on content */
+  background: linear-gradient(180deg, #614d63, #313a3422 60%);
+  display: flex;
+  flex-wrap: wrap; /* Enable wrapping for responsiveness */
+  width: 90%; /* Adjust width for smaller screens */
+  margin: auto;
+  padding: 20px;
+  margin-bottom: 60px;
+  margin-top: 30px;
+  gap: 20px; /* Add space between items */
+  border-radius: 30px;
+}
+
+.hero-right {
+  position: relative;
+  width: 92%;
+  max-width: 1024px; /* Adjust the max width as needed */
+  margin: auto; /* Center the div horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensure the video doesn't overflow */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+
+/* Container to ensure responsiveness */
+.video-container {
+  position: relative;
+  height: auto; 
+  width: 90%;
+  max-width: 600px; /* Adjust as per your design */
+  
+  overflow: hidden;
+  
+ 
+}
+
+/* Video Styling */
+.hero-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures video scales properly */
+  border-radius: inherit;
+}
+@media  (min-width: 1020px) {
+  .hero-right {
+    position: relative;
+    max-width: 100vw; /* Adjust the max width as needed */
+    margin: auto; /* Center the div horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure the video doesn't overflow */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  .hero-video {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures video scales properly */
+    border-radius: inherit;
+  }
+  
+}
+
+/* Adding an animation to the video */
+.animated-video {
+  animation: fadeInZoom 1.5s ease-in-out;
+}
+
+/* Overlay for text or effects */
+.video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .video-container {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+  .video-overlay {
+    font-size: 1rem; /* Smaller text on small screens */
+    padding: 5px 10px;
+  }
+}
+
+
+.hero-left p h1{
+  color:#8f0707;
+  
+}
+
+.hero-left {
+  flex: 1;
+margin-top: 75px;
+}
+
+.hero-left h2 {
+  font-size: 2rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.new-collection-icon {
+  display: flex;
+  flex-direction: column; /* Icon on top, text below */
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9; /* Subtle background */
+  width: 200px; /* Set a fixed width for the container */
+  height: 200px; /* Set a fixed height for the container */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.new-collection-icon:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.new-collection-icon i {
+  font-size: 5rem; /* Large icon size */
+  color: #ff5a5a; /* Vibrant color for the icon */
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.new-collection-icon i:hover {
+  transform: rotate(15deg); /* Subtle rotation effect on hover */
+}
+
+.new-collection-icon span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333; /* Neutral text color */
+  text-transform: uppercase; /* Capitalized text */
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+.hero-left h1{
+ color: #8f0707;
+}
+
+
+
+.hero-latest-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #8f0707;
+  color: white;
+  cursor: pointer;
+}
+
+.hero-latest-btn img {
+  width: 16px;
+}
+
+.hero-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left {
+    order: 2;
+  }
+
+  .hero-right {
+    order: 1;
+  }
+
+  .hero-left h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .hero-latest-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-left h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-latest-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 10px;
+  }
+
+  .hero-left h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .hero-latest-btn {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+}

@@ -1,0 +1,131 @@
+/* General Styling */
+.customer-care-container {
+    font-family: "Arial", sans-serif;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f5f7fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Title and Subtitle */
+  .customer-care-title {
+    text-align: center;
+    font-size: 36px;
+    color: #2a9d8f;
+    margin-bottom: 10px;
+  }
+  
+  .customer-care-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  /* Information Boxes */
+  .customer-care-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .info-box {
+    flex: 1 1 calc(33% - 20px);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .info-box h2 {
+    font-size: 20px;
+    color: #264653;
+    margin-bottom: 10px;
+  }
+  
+  .info-box p {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .contact-hours,
+  .contact-number,
+  .email {
+    font-weight: bold;
+    color: #2a9d8f;
+  }
+  
+  /* Feedback Section */
+  .feedback-section {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e9f5f3;
+    border-radius: 10px;
+  }
+  
+  .feedback-section h2 {
+    font-size: 22px;
+    color: #264653;
+  }
+  
+  .feedback-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .feedback-button {
+    background-color: #2a9d8f;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .feedback-button:hover {
+    background-color: #21867a;
+    transform: scale(1.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .customer-care-info {
+      flex-direction: column;
+    }
+  
+    .info-box {
+      flex: 1 1 100%;
+    }
+  
+    .feedback-section {
+      padding: 15px;
+    }
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

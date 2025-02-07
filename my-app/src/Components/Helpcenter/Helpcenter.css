@@ -1,0 +1,145 @@
+/* General Styling */
+.markhoor-help-center {
+    font-family: "Arial", sans-serif;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Title Styling */
+  .help-center-title {
+    font-size: 36px;
+    text-align: center;
+    color: #2a9d8f;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* FAQ Section */
+  .faq-section {
+    margin-bottom: 30px;
+  }
+  
+  .faq-heading {
+    font-size: 24px;
+    color: #264653;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .faq-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .faq-item {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .faq-item:hover {
+    background-color: #e9f5f3;
+    border-color: #2a9d8f;
+    transform: scale(1.05);
+    color: #264653;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .contact-section h2 {
+    font-size: 22px;
+    color: #2a9d8f;
+    margin-bottom: 10px;
+  }
+  
+  .contact-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .contact-button {
+    background-color: #2a9d8f;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-button:hover {
+    background-color: #21867a;
+    transform: scale(1.1);
+  }
+  
+  .contact-info {
+    margin-top: 20px;
+  }
+  
+  .contact-info h3 {
+    font-size: 18px;
+    color: #264653;
+    margin-bottom: 5px;
+  }
+  
+  .contact-info p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .markhoor-help-center {
+      padding: 15px;
+    }
+  
+    .help-center-title {
+      font-size: 28px;
+    }
+  
+    .faq-heading {
+      font-size: 20px;
+    }
+  
+    .faq-item {
+      font-size: 14px;
+    }
+  
+    .contact-button {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  }
+  

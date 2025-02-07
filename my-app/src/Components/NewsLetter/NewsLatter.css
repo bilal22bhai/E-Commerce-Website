@@ -1,0 +1,119 @@
+.newslatter {
+    width: 90%; /* Adjust width for responsiveness */
+    max-width: 800px; /* Set a max width */
+    height: auto; /* Adjust height based on content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 60px;
+    background: linear-gradient(180deg, #614d63, #313a3422 60%);
+    gap: 20px; /* Add space between elements */
+}
+
+.newslatter h1 {
+    color: black;
+    font-size: 40px; /* Adjust size for smaller screens */
+    font-weight: 600;
+    text-align: center; /* Center align the text */
+}
+
+.newslatter p {
+    color:black;
+    font-size: 16px; /* Adjust font size */
+    text-align: center;
+    margin: 0; /* Remove extra margin */
+}
+
+.newslatter div {
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+    align-items: center;
+    justify-content: center; /* Center align for smaller screens */
+    background: white;
+    width: 100%; /* Make responsive */
+    max-width: 730px; /* Set a max width */
+    height: auto; /* Adjust height */
+    border-radius: 40px; /* Adjust border-radius for smaller screens */
+    border: 1px solid #e3e3e3;
+    padding: 10px; /* Add padding */
+    gap: 10px; /* Add spacing between elements */
+}
+
+.newslatter input {
+    flex: 1; /* Take up available space */
+    min-width: 200px; /* Set a minimum width */
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    color: #616161;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    padding: 10px; /* Add padding for better spacing */
+}
+
+.newslatter div button {
+    width: auto; /* Allow button width to adjust */
+    min-width: 100px; /* Set a minimum width */
+    height: 50px; /* Adjust height */
+    border-radius: 25px; /* Adjust for smaller screens */
+    background: black;
+    color: white;
+    font-size: 14px; /* Adjust font size */
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0 20px; /* Add padding for better appearance */
+}
+
+@media (max-width: 768px) {
+    .newslatter h1 {
+        font-size: 32px; /* Reduce font size for tablets */
+    }
+
+    .newslatter p {
+        font-size: 14px; /* Reduce font size */
+    }
+
+    .newslatter div {
+        flex-direction: column; /* Stack input and button vertically */
+        gap: 10px;
+        height: auto; /* Adjust height */
+    }
+
+    .newslatter input {
+        width: 100%; /* Full width for smaller screens */
+        margin: 0; /* Remove extra margins */
+    }
+
+    .newslatter div button {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .newslatter h1 {
+        font-size: 24px; /* Further reduce font size for mobiles */
+    }
+
+    .newslatter p {
+        font-size: 12px; /* Adjust for smaller screens */
+    }
+
+    .newslatter div {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .newslatter input {
+        font-size: 14px; /* Adjust font size */
+        padding: 8px; /* Adjust padding */
+    }
+
+    .newslatter div button {
+        font-size: 14px; /* Adjust font size */
+        height: 40px; /* Reduce height */
+        border-radius: 20px; /* Adjust border radius */
+    }
+}

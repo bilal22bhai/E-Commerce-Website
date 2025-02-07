@@ -1,0 +1,489 @@
+/* General Styles */
+.cartitems {
+    margin: 100px 170px;
+}
+
+.cartitems hr {
+    height: 3px;
+    background: #e2e2e2;
+    border: 0;
+}
+
+/* Layout of Cart Items */
+.cartitems-format-main {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 75px;
+    padding: 20px 0px;
+    color: #454545;
+    font-size: 18px;
+    font-weight: 600;
+}
+.cartitems-promobox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* Space between input and button */
+    margin: 10px auto; /* Center the promo box */
+    max-width: 500px; /* Limit the maximum width */
+  }
+  
+  /* Input Field Styling */
+  .cartitems-promobox input {
+    flex: 1; /* Input field grows to fill available space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Button Styling */
+  .cartitems-promobox button {
+    padding: 10px 15px;
+    background-color: #4caf50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Button Hover Effect */
+  .cartitems-promobox button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cartitems-promobox {
+      flex-direction: column; /* Stack input and button vertically */
+      gap: 10px;
+    }
+  
+    .cartitems-promobox input,
+    .cartitems-promobox button {
+      width: 100%; /* Full width on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cartitems-promobox input {
+      font-size: 14px; /* Slightly smaller text for smaller screens */
+      padding: 8px;
+    }
+  
+    .cartitems-promobox button {
+      font-size: 14px;
+      padding: 8px 10px;
+    }
+  }
+/* Input Field Styling */
+.cartitems-promobox input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Default font size */
+    transition: all 0.3s ease;
+  }
+  
+  /* Placeholder Styling */
+  .cartitems-promobox input::placeholder {
+    color: #888; /* Neutral color for placeholder */
+    font-size: 16px; /* Default font size */
+    transition: font-size 0.3s ease;
+  }
+  
+  /* Adjust for smaller screens */
+  @media (max-width: 768px) {
+    .cartitems-promobox input {
+      font-size: 14px; /* Smaller input text */
+    }
+    
+    .cartitems-promobox input::placeholder {
+      font-size: 14px; /* Smaller placeholder text */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cartitems-promobox input {
+      font-size: 12px; /* Even smaller input text for very small screens */
+    }
+    
+    .cartitems-promobox input::placeholder {
+      font-size: 12px; /* Match placeholder size to input size */
+    }
+  }
+    
+
+.cartitems-format {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.carticon-product-icon {
+    height: 62px;
+}
+
+.cartitems-remove-icon {
+    width: 15px;
+    margin: 0px 40px;
+    cursor: pointer;
+}
+
+.cartitems-quantity {
+    width: 64px;
+    height: 50px;
+    border: 2px solid #ebebeb;
+    background: white;
+}
+
+.cartitems-down {
+    display: flex;
+    margin: 100px 0px;
+}
+
+.cartitems-total {
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    margin-right: 200px;
+    gap: 40px;
+}
+
+.cartitems-total-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+
+.cartitems-total button {
+    width: 262px;
+    height: 58px;
+    outline: none;
+    border: none;
+    background: #ff5a5a;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cartitems-promocode {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cartitems-promocode p {
+    color: #454545;
+}
+
+.cartitems-promobox {
+    width: 504px;
+    margin-top: 15px;
+    padding-left: 20px;
+    height: 58px;
+    background: #eaeaea;
+    display: flex;
+}
+
+.cartitems-promobox input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    width: 327px;
+    height: 50px;
+}
+
+.cartitems-promobox button {
+    width: 171px;
+    height: 58px;
+    font-size: 16px;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+/* Media Queries for responsiveness */
+
+/* Tablet screens and below (max-width: 1200px) */
+@media (max-width: 1200px) {
+    .cartitems {
+        margin: 80px 50px;
+    }
+
+    .cartitems-format-main {
+        grid-template-columns: 0.5fr 2fr 1fr 1fr;
+        gap: 40px;
+    }
+
+    .cartitems-total {
+        margin-right: 100px;
+    }
+
+    .cartitems-total button {
+        width: 220px;
+        font-size: 14px;
+    }
+
+    .cartitems-promobox {
+        width: 400px;
+    }
+
+    .cartitems-promobox input {
+        width: 250px;
+    }
+}
+
+/* Mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .cartitems {
+        margin: 60px 20px;
+    }
+
+    .cartitems-format-main {
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 20px;
+    }
+
+    .cartitems-total {
+        margin-right: 50px;
+    }
+
+    .cartitems-format {
+        font-size: 15px;
+    }
+
+    .cartitems-total button {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .cartitems-promobox {
+        width: 100%;
+        margin-top: 10px;
+        padding-left: 15px;
+    }
+
+    .cartitems-promobox input {
+        width: 70%;
+    }
+
+    .cartitems-promobox button {
+        width: 100%;
+    }
+}
+
+/* Mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .cartitems {
+        margin: 40px 10px;
+    }
+
+    .cartitems-format-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .cartitems-total {
+        margin-right: 0;
+        padding-left: 20px;
+    }
+
+    .cartitems-format {
+        font-size: 14px;
+    }
+
+    .cartitems-remove-icon {
+        margin: 0 15px;
+    }
+
+    .cartitems-quantity {
+        width: 50px;
+        height: 40px;
+    }
+
+    .cartitems-total button {
+        width: 100%;
+        height: 73px;
+        font-size: 14px;
+    }
+
+    .cartitems-promobox {
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    .cartitems-promobox input {
+        width: 70%;
+        height: 40px;
+    }
+
+    .cartitems-promobox button {
+        width: 100%;
+        height: 50px;
+    }
+}
+.cartitems-promocode {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .cartitems-promobox2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .cartitems-promobox2 input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .cartitems-promobox2 input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .cartitems-promobox2 button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .cartitems-promobox2 button:hover {
+    background-color: #0056b3;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cartitems-promobox2 {
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px;
+    }
+  
+    .cartitems-promobox2 button {
+      width: 100%;
+      padding: 12px;
+    }
+  
+    .cartitems-promobox2 input {
+      width: 100%;
+    }
+  } /* Wrapper for the quantity controls */
+.cartitems-quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  
+  background-color:  #FAF3E0;
+ 
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+/* Button styling */
+.cartitems-quantity-decrease,
+.cartitems-quantity-increase {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  background-color: #FAF3E0;
+  border: 1px solid  #FAF3E0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cartitems-quantity-decrease:hover,
+.cartitems-quantity-increase:hover {
+  background-color:  #FAF3E0;
+  border-color: #FAF3E0;
+}
+
+/* Input field styling */
+.cartitems-quantity-input {
+  width: 50px;
+  height: 32px;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #FAF3E0;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.cartitems-quantity-input:focus {
+  border-color: #555;
+}
+
+/* Responsiveness for small screens */
+@media (max-width: 600px) {
+  .cartitems-quantity-control {
+    gap: 5px;
+    max-width: 120px;
+  }
+
+  .cartitems-quantity-decrease,
+  .cartitems-quantity-increase {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  .cartitems-quantity-input {
+    width: 40px;
+    height: 28px;
+    font-size: 12px;
+  }
+}
+
+h2 {
+  display: inline-flex; /* Use inline-flex to make it align text and icon in the same line */
+  align-items: center; /* Center the text and the icon vertically */
+}
+
+h2 .react-icons {
+  margin-left: 5px; /* Add some space between text and icon */
+  position: relative;
+  top: 1px; /* Adjust this value to align the icon vertically with the text */
+}
